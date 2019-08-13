@@ -29,7 +29,6 @@ int main() {
 	
 	for(int i = 0; i < t; ++i){
 		scanf("%d %d", &test[i][0], &test[i][1]);
-		printf("%d %d\n", test[i][1], test[i][0]);
 	}
 	
 	for(int i = 0; i < t; ++i){
