@@ -4,17 +4,17 @@
 using namespace std;
 
 int T, N;
-int d[101];
+long long d[101];
 int test[1000001];
 
-int triangle(int n) {
+long long triangle(int n) {
 	//if(n == 1 || n == 2 || n == 3) return 1;
 	
-	int& ret = d[n];
+	long long& ret = d[n];
 	
-	if(ret) return ret;
+	if(ret != -1) return ret;
 	
-	ret = triangle(n-2) + triangle(n-3);
+	ret = triangle(n-1) + triangle(n-5);
 	
 	return ret;	
 }
@@ -26,15 +26,13 @@ int main() {
 		scanf("%d", &test[i]);
 	}
 	
-	
-	
-	for(int i=0; i <T; ++i){
-		memset(d, 0, sizeof(d));
-		d[1] = d[2] = d[3] = 1;
-		printf("%d\n", triangle(test[i]));
+	memset(d, -1, sizeof(d));
+	d[1] = d[2] = d[3] = 1;
+	d[4] = d[5] = 2;
+
+	for(int i=0; i <T; ++i){		
+		printf("%lld\n", triangle(test[i]));
 	}
 	
 	return 0;
 }
-
-
