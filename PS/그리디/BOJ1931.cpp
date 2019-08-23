@@ -9,6 +9,7 @@ int N;
 int BEGIN[100001], END[100001];
 
 int schedule() {
+
 	//일찍 끝나는 순서대로 정렬
 	vector<pair<int,int> > order;
 	for(int i=0; i < N; ++i){
