@@ -6,6 +6,7 @@ using namespace std;
 
 int N;
 int g[100001];
+  
 
 int main() {
 	scanf("%d", &N);	
